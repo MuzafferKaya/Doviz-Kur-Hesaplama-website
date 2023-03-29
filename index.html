@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="kurGetir()">
+    <div class="container d-flex justify-content-center">
+        <table class="text-center" border="1" cellspacing="0" cellpadding="10">
+            <thead>
+                <th>DÖVİZ</th>
+                <th class="color">ALIŞ</th>
+                <th>SATIŞ</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="d-block">
+                        <img src="img/usd.png" alt="usd">
+                        <p class="small">ABD Doları</p>
+                    </td>
+                    <td id="usdAlis" class="color"></td>
+                    <td id="usdSatis"></td>
+                </tr>
+                <tr>
+                    <td class="d-block">
+                        <img src="img/eur.png" alt="usd">
+                        <p class="small">Euro</p>
+                    </td>
+                    <td id="euroAlis" class="color"></td>
+                    <td id="euroSatis"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="text-center" border="1" cellspacing="0" cellpadding="10">
+            <tr>
+                <td><input type="number" class="form-control text-center" placeholder="Tutar" id="tutar"></td>
+                <td>
+                    <select name="" id="ddlBir" class="form-control">
+                        <option value="tl">TL</option>
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                    </select>
+                </td>
+                <td><input type="button" value="ÇEVİR" onclick="hesapla()" class="btn btn-success"></td>
+                <td>
+                    <select name="" id="ddlİki" class="form-control">
+                        <option value="tl">TL</option>
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                    </select>
+                </td>
+                <td><input type="text" id="sonuc" class="form-control" disabled></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
